@@ -13,7 +13,8 @@ app.get("/", function (req, res) {
 });
 
 app.get("/master/admin/add-society", function (req, res) {
-  res.render("master-admin-add-society", {});
+  // res.render("master-admin-add-society", {});
+  res.render("test", {});
 });
 
 app.post("/master/admin/add-society", function (req, res) {

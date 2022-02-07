@@ -1,0 +1,117 @@
+<%- include("partials/header"); -%>
+<div class="container">
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">manage societies</a>
+    </li>
+  </ul>
+  <form action="/master/admin/add-society" method="post">
+    <div class="row">
+      <div class="col-lg-3">
+        <span class="input-group-text" id="basic-addon2">society name</span>
+        <input
+          name="name"
+          type="text"
+          class="form-control"
+          aria-label="society name"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- <div class="input-group"> -->
+        <span class="input-group-text">society address</span>
+        <textarea
+          class="form-control"
+          name="address"
+          aria-label="With textarea"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>select state</option>
+          <option value="1">state One</option>
+          <option value="2">state Two</option>
+          <option value="3">state Three</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>select city</option>
+          <option value="1">city One</option>
+          <option value="2">city Two</option>
+          <option value="3">city Three</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2">postal code</span>
+          <input
+            name="postal-code"
+            type="text"
+            class="form-control"
+            aria-label="postal code"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2"
+            >no of residents</span
+          >
+          <input
+            name="residents"
+            type="text"
+            class="form-control"
+            aria-label=">no of residents"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <input type="submit" class="btn btn-primary" value="Add society" />
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
