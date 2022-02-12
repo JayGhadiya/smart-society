@@ -18,7 +18,7 @@ app.get("/master/admin/add-society", function (req, res) {
 });
 
 app.post("/master/admin/add-society", function (req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   res.redirect("/master/admin/add-society");
 });
 
