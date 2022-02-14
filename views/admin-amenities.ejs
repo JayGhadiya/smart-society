@@ -1,8 +1,13 @@
 <%- include("partials/header"); -%> <%- include("partials/admin-navbar"); -%>
 <div class="container">
-  <form action="/admin/amenities" method="post">
+  <form action="/admin/amenities" method="post" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="amenity name" /><br />
-    <input type="file" name="image" accept="image/*,.pdf" /><br />
+    <input
+      type="file"
+      id="image"
+      name="image"
+      accept="image/*,.pdf, .txt"
+    /><br />
     <input type="text" name="details" placeholder="amenity details" /><br />
     <th>
       <label>can it be booked?</label>
