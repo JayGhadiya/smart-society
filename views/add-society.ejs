@@ -1,0 +1,53 @@
+<%- include("partials/header"); -%>
+
+<a class="nav-link active" href="/master/admin/manage-societies"
+  >manage societies</a
+>
+
+<div class="container">
+  <form method="post" action="/master/admin/add-society">
+    <input type="text" name="name" id="name" placeholder="society name" />
+    <br />
+    <textarea
+      name="address"
+      id="address"
+      placeholder="society address"
+      cols="5"
+      rows="5"
+    ></textarea>
+    <br />
+    <select name="state" id="state">
+      <option selected>select state</option>
+      <option>state One</option>
+      <option>state Two</option>
+      <option>state Three</option>
+    </select>
+    <br />
+
+    <select name="city" id="city">
+      <option selected>select city</option>
+      <option>city One</option>
+      <option>city Two</option>
+      <option>city Three</option>
+    </select>
+    <br />
+
+    <input
+      type="text"
+      name="postalCode"
+      id="postalCode"
+      placeholder="postal code"
+    />
+    <br />
+    <input
+      type="number"
+      name="residents"
+      id="residents"
+      placeholder="no of residents"
+    />
+    <br />
+    <input type="submit" /> <br />
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
