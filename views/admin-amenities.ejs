@@ -1,0 +1,69 @@
+<%- include("partials/header"); -%> <%- include("partials/admin-navbar"); -%>
+<div class="container">
+  <form action="/admin/amenities" method="post">
+    <input type="text" name="name" placeholder="amenity name" /><br />
+    <input type="file" name="image" /><br />
+    <input type="text" name="details" placeholder="amenity details" /><br />
+    <th>
+      <label>can it be booked?</label>
+    </th>
+    <th><input type="checkbox" name="booked" />Yes</th>
+    <br />
+    <input type="submit" value="Add" />
+  </form>
+</div>
+<br />
+<div class="container">
+  <h3>amenities</h3>
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>amenity name</th>
+      <th>amenity photo</th>
+      <th>amenity details</th>
+      <th>can it be booked?</th>
+      <th>delete amenity</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>pool</td>
+      <td>
+        <img
+          src="https://images.pexels.com/photos/261238/pexels-photo-261238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="pool"
+        />
+      </td>
+      <td>Vitae purus faucibus ornare suspendisse sed nisi lacus sed.</td>
+      <td>No</td>
+      <td><button type="submit">Delete</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>playground</td>
+      <td>
+        <img
+          src="https://images.pexels.com/photos/3921014/pexels-photo-3921014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="playground"
+        />
+      </td>
+      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      <td>No</td>
+      <td><button type="submit">Delete</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>party lawn</td>
+      <td>
+        <img
+          src="https://images.pexels.com/photos/3351909/pexels-photo-3351909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="lawn"
+        />
+      </td>
+      <td>Excepteur sint occaecat cupidatat non proident.</td>
+      <td>Yes</td>
+      <td><button type="submit">Delete</button></td>
+    </tr>
+  </table>
+</div>
+
+<%- include("partials/footer"); -%>

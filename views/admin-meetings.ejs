@@ -1,0 +1,54 @@
+<%- include("partials/header"); -%> <%- include("partials/admin-navbar"); -%>
+
+<div class="container">
+  <form action="/admin/meetings" method="post">
+    <input type="text" name="title" id="title" placeholder="title" /><br />
+    <input
+      type="text"
+      name="agenda"
+      id="agenda"
+      placeholder="meeting agenda"
+    /><br />
+    <input type="datetime-local" name="datetime" /><br />
+    <input
+      type="text"
+      name="details"
+      id="details"
+      placeholder="meeting details"
+    /><br />
+    <input
+      type="text"
+      name="venue"
+      id="venue"
+      placeholder="meeting venue"
+    /><br />
+    <input type="submit" value="Add" />
+  </form>
+</div>
+<br />
+<div class="container">
+  <h3>scheduled meetings</h3>
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>meeting title</th>
+      <th>meeting agenda</th>
+      <th>date</th>
+      <th>time</th>
+      <th>meeting agenda</th>
+      <th>venue</th>
+      <th>delete meeting</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>navratri celebration</td>
+      <td>arrangements for dandiya-raas</td>
+      <td>2022-02-15</td>
+      <td>09:30PM</td>
+      <td>Vitae purus faucibus ornare suspendisse sed nisi lacus sed.</td>
+      <td>party lawn</td>
+      <td><button type="submit">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<%- include("partials/footer"); -%>

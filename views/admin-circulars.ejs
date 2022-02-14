@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%> <%- include("partials/admin-navbar"); -%>
+<div class="container">
+  <form action="/admin/circulars" method="post">
+    <input type="text" name="title" placeholder="circular title" /><br />
+    <input type="text" name="details" placeholder="circular details" /><br />
+    <input type="submit" value="Add" />
+  </form>
+</div>
+<br />
+<div class="container">
+  <h3>issued circulars</h3>
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>circular title</th>
+      <th>circular details</th>
+      <th>issuance date</th>
+      <th>delete</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>regarding parking spots</td>
+      <td>Vitae purus faucibus ornare suspendisse sed nisi lacus sed.</td>
+      <td>12/02/2022</td>
+      <td><button type="submit">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<%- include("partials/footer"); -%>
