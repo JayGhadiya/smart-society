@@ -1,0 +1,126 @@
+<%- include("../partials/header"); -%>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">manage societies</a>
+  </li>
+</ul>
+<div class="container">
+  <div class="row">
+    <form action="/master/admin/add-society" method="post">
+      <!-- ####### -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="society name"
+            />
+            <label for="name">society name</label>
+          </div>
+        </div>
+      </div>
+      <!-- ####### -->
+      <!-- ####### -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <textarea
+              name="address"
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="address"
+            ></textarea>
+            <label for="address">society address</label>
+          </div>
+        </div>
+      </div>
+      <!-- ####### -->
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <select
+              name="state"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>select state</option>
+              <option>state One</option>
+              <option>state Two</option>
+              <option>state Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <select
+              name="city"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>select city</option>
+              <option>city One</option>
+              <option>city Two</option>
+              <option>city Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- ####### -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <input
+              name="postalcode"
+              type="text"
+              class="form-control"
+              id="postalcode"
+              placeholder="postalcode"
+            />
+            <label for="postalcode">postal code</label>
+          </div>
+        </div>
+      </div>
+      <!-- ####### -->
+
+      <!-- ####### -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-floating">
+            <input
+              name="residents"
+              type="text"
+              class="form-control"
+              id="residents"
+              placeholder="residents"
+            />
+            <label for="residents">no of residents</label>
+          </div>
+        </div>
+      </div>
+      <!-- ####### -->
+
+      <div class="row">
+        <div class="col-lg-3">
+          <input
+            type="submit"
+            name="add"
+            class="btn btn-primary"
+            value="Add society"
+          />
+        </div>
+      </div>
+      <!-- ####### -->
+    </form>
+  </div>
+</div>
+
+<%- include("../partials/footer"); -%>
