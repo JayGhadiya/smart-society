@@ -1,0 +1,32 @@
+<%- include("../partials/header"); -%> <%- include("../partials/admin-navbar");
+-%>
+<div class="container">
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>title</th>
+      <th>description</th>
+      <th>filed on</th>
+      <th>filed by</th>
+      <th>admin's comment</th>
+      <th>status</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>lorem ipsum</td>
+      <td>
+        <!-- complaintId will be passed over to app.js to render a specific complaint -->
+        <a href="/admin/complaints/complaintId"
+          >Vitae purus faucibus ornare suspendisse sed nisi lacus sed.</a
+        >
+      </td>
+      <td>12/02/2022</td>
+      <td>frank sheeran<br />A-403</td>
+      <!-- "no comment" will be the default value when a user files a complaint
+         and will be overwritten by the admin -->
+      <td>no comment</td>
+      <td><button type="submit">Resolve</button></td>
+    </tr>
+  </table>
+</div>
+<%- include("../partials/footer"); -%>

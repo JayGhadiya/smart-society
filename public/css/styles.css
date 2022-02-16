@@ -1,7 +1,9 @@
 a {
   text-decoration: none;
 }
-img {
+
+.amenity-picture {
   height: 150px;
   width: 150px;
 }
+  

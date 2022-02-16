@@ -1,0 +1,25 @@
+<%- include("../partials/header"); -%> <%-
+include("../partials/user-navbar");-%>
+
+<div class="container">
+  <h3>Login</h3>
+  <br />
+  <form action="/login" method="post">
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="email address"
+    /><br /><br />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+    /><br /><br />
+    <input type="submit" value="Login" />
+  </form>
+  <br />
+  not registered? <a href="/register"> Register</a>
+</div>
+<%- include("../partials/footer"); -%>

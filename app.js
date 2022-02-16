@@ -2,6 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const multer = require("multer");
+const { handle } = require("express/lib/application");
 
 // SETTING UP FILENAME AND DESTINATION
 const storage = multer.diskStorage({
@@ -42,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // HOME PAGE
 app.get("/", function (req, res) {
-  res.render("home", {});
+  res.render("test-pages/home");
 });
 
 // ADD A SOCIETY
@@ -50,8 +51,7 @@ app
   .route("/master/admin/add-society")
 
   .get(function (req, res) {
-    res.render("add-society", {});
-    res.redirect("/");
+    res.render("master-admin-pages/master-add-society");
   })
   .post(function (req, res) {
     console.log(req.body);
@@ -63,7 +63,7 @@ app
   .route("/master/admin/manage-societies")
 
   .get(function (req, res) {
-    res.render("manage-societies");
+    res.render("master-admin-pages/master-manage-societies");
   })
   .post(function (req, res) {
     // deltetion of society from the database
@@ -74,7 +74,7 @@ app
   .route("/admin/login")
 
   .get(function (req, res) {
-    res.render("admin-login");
+    res.render("admin-pages/admin-login");
   })
   .post(function (req, res) {
     console.log(req.body);
@@ -83,12 +83,12 @@ app
 
 // ADMIN PROFILE
 app.get("/admin/profile", function (req, res) {
-  res.render("admin-profile");
+  res.render("admin-pages/admin-profile");
 });
 
 // HANDLE USERS
 app.get("/admin/handle-users", function (req, res) {
-  res.render("admin-handle-users");
+  res.render("admin-pages/admin-handle-users");
 });
 
 // MEETINGS
@@ -96,10 +96,9 @@ app
   .route("/admin/meetings")
 
   .get(function (req, res) {
-    res.render("admin-meetings");
+    res.render("admin-pages/admin-meetings");
   })
   .post(function (req, res) {
-    console.log(req.file.mimetype);
     res.redirect("/admin/meetings");
   });
 
@@ -108,7 +107,7 @@ app
   .route("/admin/circulars")
 
   .get(function (req, res) {
-    res.render("admin-circulars");
+    res.render("admin-pages/admin-circulars");
   })
   .post(function (req, res) {
     console.log(req.body);
@@ -120,10 +119,82 @@ app
   .route("/admin/amenities")
 
   .get(function (req, res) {
-    res.render("admin-amenities");
+    res.render("admin-pages/admin-amenities");
   })
   .post(upload.single("image"), function (req, res) {
     res.redirect("/admin/amenities");
+  });
+
+// COMPLAINTS
+app
+  .route("/admin/complaints")
+
+  .get(function (req, res) {
+    res.render("admin-pages/admin-complaints");
+  });
+
+// COMPLAINT PAGE
+app
+  .route("/admin/complaints/complaintId")
+
+  .get(function (req, res) {
+    res.render("admin-pages/complaint");
+  })
+  .post(function (req, res) {
+    // this will handle psoting the comment to
+    // the database and overwriting the defalut comment
+    console.log(req.body);
+    res.redirect("/admin/complaints");
+  });
+
+// USER PAGES
+
+// REGISTRATION
+app
+  .route("/register")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-registration");
+  })
+  .post(function (req, res) {
+    console.log(req.body);
+    res.redirect("home");
+  });
+
+// LOGIN
+app
+  .route("/login")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-login");
+  })
+  .post(function (req, res) {
+    console.log(req.body);
+    res.redirect("/home");
+  });
+
+// HOME PAGE
+app
+  .route("/home")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-home");
+  });
+
+// PROFILE
+app
+  .route("/profile")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-profile");
+  });
+
+// CONTACT ADMIN/SECRETARY
+app
+  .route("/contact")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-contact");
   });
 
 app.listen(5000, function () {

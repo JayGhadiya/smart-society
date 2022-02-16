@@ -1,4 +1,5 @@
-<%- include("partials/header"); -%> <%- include("partials/admin-navbar"); -%>
+<%- include("../partials/header"); -%> <%- include("../partials/admin-navbar");
+-%>
 <div class="container">
   <form action="/admin/amenities" method="post" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="amenity name" /><br />
@@ -34,6 +35,7 @@
       <td>pool</td>
       <td>
         <img
+          class="amenity-picture"
           src="https://images.pexels.com/photos/261238/pexels-photo-261238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="pool"
         />
@@ -47,6 +49,7 @@
       <td>playground</td>
       <td>
         <img
+          class="amenity-picture"
           src="https://images.pexels.com/photos/3921014/pexels-photo-3921014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="playground"
         />
@@ -60,6 +63,7 @@
       <td>party lawn</td>
       <td>
         <img
+          class="amenity-picture"
           src="https://images.pexels.com/photos/3351909/pexels-photo-3351909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="lawn"
         />
@@ -71,4 +75,4 @@
   </table>
 </div>
 
-<%- include("partials/footer"); -%>
+<%- include("../partials/footer"); -%>
