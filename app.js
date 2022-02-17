@@ -2,8 +2,6 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const multer = require("multer");
-const { handle } = require("express/lib/application");
-const { stringify } = require("nodemon/lib/utils");
 
 // SETTING UP FILENAME AND DESTINATION
 const storage = multer.diskStorage({
