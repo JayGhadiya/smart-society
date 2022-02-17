@@ -3,6 +3,7 @@ const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const { handle } = require("express/lib/application");
+const { stringify } = require("nodemon/lib/utils");
 
 // SETTING UP FILENAME AND DESTINATION
 const storage = multer.diskStorage({
@@ -187,6 +188,48 @@ app
 
   .get(function (req, res) {
     res.render("user-pages/user-profile");
+  });
+
+// SERVICES
+app
+  .route("/services")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-services");
+  });
+
+// SERVICES/AMENITIES
+app
+  .route("/services/amenities")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-amenities");
+  })
+
+  .post(function (req, res) {
+    console.log(req.body);
+    res.redirect("/services/amenities");
+  });
+
+// SERVICES/CIRCULARS
+app
+  .route("/services/circulars")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-circulars");
+  });
+
+// SERVICES/COMPLAINTS
+app
+  .route("/services/complaints")
+
+  .get(function (req, res) {
+    res.render("user-pages/user-complaints");
+  })
+
+  .post(function (req, res) {
+    console.log(req.body);
+    res.redirect("/services/complaints");
   });
 
 // CONTACT ADMIN/SECRETARY

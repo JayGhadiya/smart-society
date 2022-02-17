@@ -1,0 +1,43 @@
+<%- include("../partials/header"); -%> <%- include("../partials/user-navbar");
+-%>
+
+<div class="container">
+  <form action="/services/complaints" method="post">
+    <h3 name="amenityName">file a complaint</h3>
+    <br />
+
+    <label for="complaintTitle"><h4>complaint title</h4></label><br />
+    <input type="text" name="complaintTitle" id="complaintTitle" /><br /><br />
+    <label for="description"><h4>description:</h4></label><br />
+    <textarea name="description" id="description" cols="30" rows="5"> </textarea
+    ><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+<br />
+<div class="container">
+  <h4>your complaints</h4>
+  <br />
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>title</th>
+      <th>description</th>
+      <th>filed on</th>
+      <th>admin's comment</th>
+      <th>status</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>dolor sit</td>
+      <td>Lorem ipsum dolor sit amet elit.</td>
+      <td>17/02/2022</td>
+      <td>Lorem ipsum dolor sit amet elit.</td>
+
+      <td>
+        <button class="btn btn-info btn-sm">resolved</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<%- include("../partials/footer"); -%>

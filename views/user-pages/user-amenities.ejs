@@ -1,0 +1,49 @@
+<%- include("../partials/header"); -%> <%- include("../partials/user-navbar");
+-%>
+
+<div class="container">
+  <h3>amenity at a glance</h3>
+  <br />
+  <img
+    class="amenity-picture"
+    src="https://images.pexels.com/photos/261238/pexels-photo-261238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    alt="pool"
+  /><br /><br />
+  <form action="/services/amenities" method="post">
+    <h3 name="amenityName">swimming pool</h3>
+    <br />
+
+    <label for="bookFrom"><h4>book from:</h4></label><br />
+    <input type="datetime-local" name="bookFrom" id="bookFrom" /><br /><br />
+    <label for="bookTill"><h4>book till:</h4></label><br />
+    <input type="datetime-local" name="bookTill" id="bookTill" /><br /><br />
+    <label for="description"><h4>description:</h4></label><br />
+    <textarea name="description" id="description" cols="30" rows="5"> </textarea
+    ><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+<hr />
+<div class="container">
+  <table>
+    <tr>
+      <th>sr no</th>
+      <th>amenity</th>
+      <th>description</th>
+      <th>book from</th>
+      <th>book till</th>
+      <th>status</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>party lawn</td>
+      <td>Lorem ipsum dolor sit amet elit.</td>
+      <td>17/02/2021</td>
+      <td>17/02/2021</td>
+      <td>
+        <button class="btn btn-info btn-sm">approved</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<%- include("../partials/footer"); -%>
